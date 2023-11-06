@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Password = () => {
+export function Password() {
   const [showPassword, setShowPassword] = useState(false);
 
   function handleShowPassword() {
@@ -9,7 +9,8 @@ const Password = () => {
 
   return (
     <div>
-      <input type={showPassword ? "text" : "password"} placeholder="Senha" />
+      <label htmlFor="password">Senha</label>
+      <input type={showPassword ? "text" : "password"} autoComplete="off" />
       <button onClick={handleShowPassword}>
         <i
           className={
@@ -19,6 +20,4 @@ const Password = () => {
       </button>
     </div>
   );
-};
-
-export default Password;
+}

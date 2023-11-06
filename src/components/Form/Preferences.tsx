@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Preferences() {
+export function PreferencesForm() {
   return (
     <>
       <div>

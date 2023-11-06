@@ -1,17 +1,13 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-import AccountType from "../layouts/register/Account_type";
-import { SignUp } from "../layouts/register/SignUp";
-
-function getSessionStorager() {
-  return JSON.stringify(sessionStorage.getItem("PersonalInformationObj"));
-}
+import AccountType from "../layouts/register/AccountType";
+import { SignUpRedirect } from "../layouts/register/SignUp/SignUpRedirect";
 
 export const AuthRoutes = createBrowserRouter([
   {
     path: "/login",
-    element: <div>{getSessionStorager()}</div>,
+    element: <div>Login</div>,
   },
   {
     path: "/register/account-type",
@@ -19,10 +15,6 @@ export const AuthRoutes = createBrowserRouter([
   },
   {
     path: "/register/:id",
-    element: <SignUp />,
-  },
-  {
-    path: "/register/:personal_data",
-    element: <SignUp />,
+    element: <SignUpRedirect />,
   },
 ]);
