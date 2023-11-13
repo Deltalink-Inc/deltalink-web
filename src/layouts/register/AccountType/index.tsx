@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-const AccountType = () => {
+export function AccountType() {
   const [typeId, setTypeId] = useState("");
   const [disabledNextStepBtn, setDisabledNextStepBtn] = useState(true);
 
+  const Title = styled.h2`
+    color: red;
+  `;
   function handleTypeSelect(id: string) {
     setTypeId(id);
   }
@@ -16,7 +20,7 @@ const AccountType = () => {
         <h1>DELTALINK</h1>
       </div>
       <div>
-        <h2>Qual tipo de conta você quer criar?</h2>
+        <Title>Qual tipo de conta você quer criar?</Title>
         <div>
           <label htmlFor="client">
             <input
@@ -63,6 +67,4 @@ const AccountType = () => {
       </div>
     </>
   );
-};
-
-export default AccountType;
+}

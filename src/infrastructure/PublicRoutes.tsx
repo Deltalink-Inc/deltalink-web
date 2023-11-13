@@ -1,14 +1,12 @@
-import React from "react";
-import { createBrowserRouter } from "react-router-dom";
+// import React from "react";
+// import { createBrowserRouter } from "react-router-dom";
 
-export const PublicRoutes = createBrowserRouter([
-  {
-    path: "/",
-    element: <h1>Homepage</h1>,
-  },
+// import AccountType from "../layouts/register/AccountType";
+// import { SignUpRedirect } from "../layouts/register/SignUp/SignUpRedirect";
 
-  {
-    path: "/about",
-    element: <h1>Sobre</h1>,
-  },
-]);
+// export const PublicRoutes = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <div>Login</div>,
+//   },
+// ]);

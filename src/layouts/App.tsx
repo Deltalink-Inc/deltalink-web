@@ -1,15 +1,21 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 
-import { AuthRoutes } from "../infrastructure/AuthRoutes";
-import { PublicRoutes } from "../infrastructure/PublicRoutes";
+import { register } from "swiper/element/bundle";
+register();
+
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+// import { AuthRoutes } from "../infrastructure/AuthRoutes";
+// import { PublicRoutes } from "../infrastructure/PublicRoutes";
+import { Routes } from "../infrastructure/Routes";
 
 const App = () => {
   return (
     <>
-      {/* <RouterProvider router={PublicRoutes} /> */}
-
-      <RouterProvider router={AuthRoutes} />
+      <RouterProvider router={Routes} />
     </>
   );
 };

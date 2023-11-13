@@ -1,23 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import { handleInputChange } from "../../util/handleInputChange";
 
-export function StoreInformationForm() {
-  const [storeData, setStoreData] = useState({
-    storeName: "",
-    companyName: "",
-    cpnj: "",
-    coreBusiness: "",
-  });
-
-  function handleInputChange(e) {
-    const { id, value } = e.target;
-    setStoreData({
-      ...storeData,
-      [id]: value,
-    });
-  }
-  return (  
+export function StoreInformationForm({
+  storeInformation,
+  setStoreInformation,
+}) {
+  return (
     <>
-      <h2>Dados Pessoais</h2>
+      <h2>Informações da Loja</h2>
       <div>
         <div>
           <label htmlFor="storeName">Nome da Loja</label>
@@ -25,21 +15,35 @@ export function StoreInformationForm() {
             type="text"
             id="storeName"
             required
-            value={storeData.storeName}
-            onChange={handleInputChange}
+            value={storeInformation.storeName}
+            onChange={() => {
+              handleInputChange(storeInformation, setStoreInformation, event);
+            }}
           />
         </div>
         <div>
-          <label htmlFor="companyName">Razão Social</label>
-          <input type="text" id="companyName" required />
-        </div>
-        <div>
           <label htmlFor="cpnj">CPNJ</label>
-          <input type="text" id="cpnj" required />
+          <input
+            type="text"
+            id="cpnj"
+            required
+            value={storeInformation.cpnj}
+            onChange={() => {
+              handleInputChange(storeInformation, setStoreInformation, event);
+            }}
+          />
         </div>
         <div>
           <label htmlFor="coreBusiness">Setor de Atuação</label>
-          <input type="text" id="coreBusiness" required />
+          <input
+            type="text"
+            id="coreBusiness"
+            required
+            value={storeInformation.coreBusiness}
+            onChange={() => {
+              handleInputChange(storeInformation, setStoreInformation, event);
+            }}
+          />
         </div>
       </div>
     </>

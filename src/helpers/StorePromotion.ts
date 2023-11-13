@@ -1,0 +1,86 @@
+import { StoreCardProps } from "../types/StoreCardProps";
+
+export function StorePromotion(): StoreCardProps[] {
+  return [
+    {
+      id: "1",
+      logoPath: "src/assets/img/stores-logo/rs-sabores.jpg",
+      name: "RS Sabores",
+      description: "Para adoçar sua vida nesses tempos!",
+      category: "Alimentos",
+      urlTo: "https://www.youtube.com",
+    },
+    {
+      id: "2",
+      logoPath: "src/assets/img/stores-logo/bazar-regi.jpg",
+      name: "Bazar da Regi",
+      description: "Seu estilo ao seu alcançe.",
+      category: "Moda",
+      urlTo: "",
+    },
+    {
+      id: "3",
+      logoPath: "src/assets/img/stores-logo/fina-flor.jpg",
+      name: "Fina Flor",
+      description: "Venha rejuvelhecer conosco.",
+      category: "Beleza & Saúde",
+      urlTo: "",
+    },
+    {
+      id: "4",
+      logoPath: "src/assets/img/stores-logo/sabor-supremo.jpg",
+      name: "Sabor Supremo",
+      description: " Deliciosos sabores que conquistam.",
+      category: "Alimentos",
+      urlTo: "",
+    },
+    {
+      id: "5",
+      logoPath: "src/assets/img/stores-logo/vitalidade-pura.jpg",
+      name: "Vitalidade Pura",
+      description: "Produtos naturais para cuidar de você.",
+      category: "Alimentos",
+      urlTo: "",
+    },
+    {
+      id: "6",
+      logoPath: "src/assets/img/stores-logo/elegancia-urbana.jpg",
+      name: "Elegância Urbana",
+      description: "Estilo contemporâneo para o dia a dia.",
+      category: "Moda",
+      urlTo: "",
+    },
+    {
+      id: "7",
+      logoPath: "src/assets/img/stores-logo/inovacao-connect.jpg",
+      name: "Inovação Connect",
+      description: "Gadgets avançados que conectam.",
+      category: "Eletrônicos",
+      urlTo: "",
+    },
+    {
+      id: "8",
+      logoPath: "src/assets/img/stores-logo/aromas-artesanais.jpg",
+      name: "Aromas",
+      description: "Delícias feitas com paixão.",
+      category: "Alimentos",
+      urlTo: "",
+    },
+    {
+      id: "9",
+      logoPath: "src/assets/img/stores-logo/estilo-livre.jpg",
+      name: "Estilo Livre",
+      description: "Roupas que refletem sua individualidade.",
+      category: "Moda",
+      urlTo: "",
+    },
+    {
+      id: "10",
+      logoPath: "src/assets/img/stores-logo/conectando-horizontes.jpg",
+      name: "Conectando",
+      description: "Dispositivos que transcendem.",
+      category: "Eletrônicos",
+      urlTo: "",
+    },
+  ];
+}
