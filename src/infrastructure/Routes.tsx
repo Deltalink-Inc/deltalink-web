@@ -18,10 +18,6 @@ export const Routes = createBrowserRouter([
     element: <ProductCatalog />,
   },
   // {
-  //   path: "/",
-  //   element: <Homepage />,
-  // },
-  // {
   //   path: "/login",
   //   element: <Login />,
   // },

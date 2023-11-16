@@ -1,15 +1,17 @@
 import React from "react";
 
+import { CardSlider } from "../../components/CardSlider";
+import { Highlights } from "../../components/Highlights/Highlights";
 import { CustomerNav } from "../../components/Nav/Customer";
 import { OnSaleSlider } from "../../components/OnSaleSlider";
-import { CardSlider } from "../../components/CardSlider"
 
 export function Homepage() {
-    return (
-        <>
-            <CustomerNav />
-            <OnSaleSlider />
-            <CardSlider/>
-        </>
-    );
+  return (
+    <>
+      <CustomerNav />
+      <OnSaleSlider />
+      <CardSlider />
+      <Highlights />
+    </>
+  );
 }

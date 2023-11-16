@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ProductPromotion } from "../helpers/ProductPromotion";
+import { ProductPromotion } from "../db/ProductPromotion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

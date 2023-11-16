@@ -1,6 +1,8 @@
 export type ProductProps = {
-  imgPath: string;
-  name: string;
-  price: string;
-  installments: string;
+    id: string;
+    name: string;
+    category: string;
+    price: string;
+    installments: string;
+    imgPath: string;
 };

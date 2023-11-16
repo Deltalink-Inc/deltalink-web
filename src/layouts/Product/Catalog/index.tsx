@@ -1,34 +1,23 @@
 import React from "react";
+
+import { CustomerNav } from "../../../components/Nav/Customer";
 import { ProductCatalogCard } from "../../../components/ProductCatalogCard";
 import { ProductProps } from "../../../types/ProductProps";
-
-const productsList: ProductProps[] = [
-  {
-    imgPath: "",
-    name: "Redmi Note 12 Pro 4G",
-    price: "R$1530",
-    installments: "em 12x R$127,50",
-  },
-  {
-    imgPath: "",
-    name: "Iphone 13 Plus",
-    price: "R$4500",
-    installments: "em 12x R$375,0",
-  },
-];
+import { ProductsDb } from "../../../db/Products";
 
 export function ProductCatalog() {
   return (
-    <div id="catalogBody">
-      {productsList.map((product, index) => (
+    <>
+      <CustomerNav />
+      <h1>Eletrônicos</h1>
+      {ProductsDb.map((product) => (
         <ProductCatalogCard
-          key={index}
-          imgPath={product.imgPath}
+          LogoPath={product.imgPath}
           name={product.name}
           price={product.price}
           installments={product.installments}
         />
       ))}
-    </div>
+    </>
   );
 }

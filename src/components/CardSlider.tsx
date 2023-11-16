@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/element/css/mousewheel";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import { StoreCard } from "../components/StoreCard/StoreCard";
-import { StorePromotion } from "../helpers/StorePromotion";
+import { StorePromotion } from "../db/StorePromotion";
 
 export function CardSlider() {
   const stores = StorePromotion();

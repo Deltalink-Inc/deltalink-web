@@ -2,10 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components",
-    "\\src\\layouts",
-    "\\src\\layouts\\Homepage"
+    "\\src\\assets",
+    "\\src\\assets\\img",
+    "\\src\\assets\\img\\products-image",
+    "\\src\\db",
+    "\\src\\layouts\\Homepage",
+    "\\src\\types"
   ],
-  "SelectedNode": "\\src\\components\\CardSlider.tsx",
+  "SelectedNode": "\\src\\assets\\img\\products-image\\4786.jpg",
   "PreviewInSolutionExplorer": false
 }

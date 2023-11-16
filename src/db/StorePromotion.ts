@@ -82,5 +82,13 @@ export function StorePromotion(): StoreCardProps[] {
       category: "Eletrônicos",
       urlTo: "",
     },
+    {
+      id: "11",
+      logoPath: "src/assets/img/stores-logo/pantera-logo.jpg",
+      name: "Pantera",
+      description: "Pink Panda.",
+      category: "Moda",
+      urlTo: "",
+    },
   ];
 }
