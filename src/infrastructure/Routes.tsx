@@ -7,6 +7,7 @@ import { Login } from "../layouts/Login";
 
 import { Homepage } from "../layouts/Homepage";
 import { ProductCatalog } from "../layouts/Product/Catalog";
+import { Checkout } from "../layouts/Order/Checkout";
 
 export const Routes = createBrowserRouter([
   {
@@ -14,8 +15,12 @@ export const Routes = createBrowserRouter([
     element: <Homepage />,
   },
   {
-    path: "/product/catalog",
+    path: "/product/catalog/:categoryId",
     element: <ProductCatalog />,
+  },
+  {
+    path: "/order/checkout/:productId",
+    element: <Checkout />,
   },
   // {
   //   path: "/login",
