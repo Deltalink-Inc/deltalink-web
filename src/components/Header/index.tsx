@@ -27,8 +27,16 @@ export function CustomerNav() {
     <Header>
       {/* Coluna 1 */}
       <Column1>
-        <Logo src="src\assets\img\deltalink_logo.svg" alt="Logo deltalink" />
-        <DeltaLinkTitle>DELTALINK.</DeltaLinkTitle>
+        <Link
+          to={"/"}
+          style={{
+            textAlign: "center",
+            textDecoration: "none",
+          }}
+        >
+          <Logo src="/deltalink_logo.svg" alt="Logo deltalink" />
+          <DeltaLinkTitle>DELTALINK.</DeltaLinkTitle>
+        </Link>
       </Column1>
       {/* Coluna 2 */}
       <Column2>
@@ -42,16 +50,22 @@ export function CustomerNav() {
           <nav>
             <CategoryList>
               <CategoryItem>
-                <button>Alimentos</button>
+                <Link to="/product/catalog/food">
+                  <button>Alimentos</button>
+                </Link>
               </CategoryItem>
               <CategoryItem>
-                <button>Saúde & Beleza</button>
+                <Link to="/product/catalog/healthandbeauty">
+                  <button>Saúde & Beleza</button>
+                </Link>
               </CategoryItem>
               <CategoryItem>
-                <button>Moda</button>
+                <Link to="/product/catalog/fashion">
+                  <button>Moda</button>
+                </Link>
               </CategoryItem>
               <CategoryItem>
-                <Link to="/product/catalog">
+                <Link to="/product/catalog/electronics">
                   <button>Eletrônicos</button>
                 </Link>
               </CategoryItem>
