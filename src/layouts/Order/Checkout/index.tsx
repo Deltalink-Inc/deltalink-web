@@ -10,10 +10,10 @@ import * as styles from "./style";
 
 import { ProductsDb } from "../../../db/Products";
 import { WeightFee } from "../../../helpers/feeRates";
+import { palette } from "../../../helpers/ColorPalette";
 
 export function Checkout() {
   const { productId } = useParams();
-
   let product;
 
   ProductsDb.forEach((currentProduct) => {
@@ -34,19 +34,29 @@ export function Checkout() {
   return (
     <>
       <CustomerNav />
-      <div>
+      <div
+        style={{
+          padding: "1rem",
+          display: "grid",
+          gridTemplateColumns: "4fr 1fr",
+
+          backgroundColor: palette().platinum2,
+        }}
+      >
         <div>
           <div>
             <h1>Endereço</h1>
             <AddressForm />
           </div>
           <styles.PaymentContainer>
-            <div>
-              <h1>Escolha como Pagar</h1>
+            <styles.PaymentMethodSelect>
+              <styles.PaymentContainerTitle>
+                Escolha como Pagar
+              </styles.PaymentContainerTitle>
               <div>
                 <SelectPaymentMethod />
               </div>
-            </div>
+            </styles.PaymentMethodSelect>
             <div>
               <CreditCardDetails fee={fee} productObject={product} />
             </div>
@@ -62,14 +72,14 @@ export function Checkout() {
             </tr>
             <tr>
               <td>Tax. Entrega</td>
-              <td>R$ {fee}</td>
+              <td>R$ {fee.toFixed(2)}</td>
             </tr>
           </table>
           <hr />
           <table>
             <tr>
               <td>Você pagará</td>
-              <td>R$ {parseFloat(product.price) + fee}</td>
+              <td>R$ {(parseFloat(product.price) + fee).toFixed(2)}</td>
             </tr>
           </table>
           <button>Finalizar Pedido</button>
