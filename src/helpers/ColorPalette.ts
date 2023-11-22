@@ -1,5 +1,6 @@
 export function palette() {
   return {
+    absoluteWhite: "#FFF",
     whiteSmoke: "#F5F3F4",
     platinum: "#E2E2E2",
     platinum2: "#D9D9D9",

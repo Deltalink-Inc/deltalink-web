@@ -1,16 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import { CustomerNav } from "../../../components/Header";
-import { CreditCardDetails } from "../../../components/PaymentMethods/CreditCardDetails";
-import { SelectPaymentMethod } from "../../../components/PaymentMethods/SelectPaymentMethod";
 import { AddressForm } from "../../../components/Form/Address";
+import { CustomerNav } from "../../../components/Header";
+import { PixDetails } from "../../../components/PaymentMethods/PixDetails";
 
 import * as styles from "./style";
+import { palette } from "../../../helpers/ColorPalette";
 
 import { ProductsDb } from "../../../db/Products";
 import { WeightFee } from "../../../helpers/feeRates";
-import { palette } from "../../../helpers/ColorPalette";
 
 export function Checkout() {
   const { productId } = useParams();
@@ -33,56 +32,85 @@ export function Checkout() {
 
   return (
     <>
-      <CustomerNav />
       <div
         style={{
-          padding: "1rem",
-          display: "grid",
-          gridTemplateColumns: "4fr 1fr",
-
-          backgroundColor: palette().platinum2,
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
-        <div>
+        <CustomerNav />
+        <div
+          style={{
+            flex: "1",
+
+            display: "grid",
+            gridTemplateColumns: "4fr 1fr",
+
+            backgroundColor: palette().platinum2,
+          }}
+        >
           <div>
-            <h1>Endereço</h1>
-            <AddressForm />
-          </div>
-          <styles.PaymentContainer>
-            <styles.PaymentMethodSelect>
-              <styles.PaymentContainerTitle>
-                Escolha como Pagar
-              </styles.PaymentContainerTitle>
-              <div>
-                <SelectPaymentMethod />
-              </div>
-            </styles.PaymentMethodSelect>
             <div>
-              <CreditCardDetails fee={fee} productObject={product} />
+              <h1>Endereço</h1>
+              <AddressForm />
             </div>
-          </styles.PaymentContainer>
-        </div>
-        <div>
-          <h1>Resumo do Pedido</h1>
-          <hr />
-          <table>
-            <tr>
-              <td>Produto</td>
-              <td>R$ {product.price}</td>
-            </tr>
-            <tr>
-              <td>Tax. Entrega</td>
-              <td>R$ {fee.toFixed(2)}</td>
-            </tr>
-          </table>
-          <hr />
-          <table>
-            <tr>
-              <td>Você pagará</td>
-              <td>R$ {(parseFloat(product.price) + fee).toFixed(2)}</td>
-            </tr>
-          </table>
-          <button>Finalizar Pedido</button>
+            <styles.PaymentContainer>
+              <styles.PaymentMethodSelect>
+                <styles.PaymentContainerTitle>
+                  Escolha como Pagar
+                </styles.PaymentContainerTitle>
+                <div>
+                  <styles.SelectMethodContainer>
+                    <styles.MethodButton htmlFor="pix">
+                      <input type="radio" id="pix" name="paymentMethod"/>
+                      <span>PIX</span>
+                      <i className="fa-brands fa-pix"></i>
+                    </styles.MethodButton>
+                    <styles.MethodButton htmlFor="creditCard">
+                      <input
+                        type="radio"
+                        id="creditCard"
+                        name="paymentMethod"
+                      />
+                      <span>Cartão de Crédito</span>
+                      <i className="fa-solid fa-credit-card"></i>
+                    </styles.MethodButton>
+                    <styles.MethodButton htmlFor="money">
+                      <input type="radio" id="money" name="paymentMethod"/>
+                      <span>Dinheiro</span>
+                      <i className="fa-solid fa-money-bill"></i>
+                    </styles.MethodButton>
+                  </styles.SelectMethodContainer>
+                </div>
+              </styles.PaymentMethodSelect>
+              <div>
+                <PixDetails/>
+              </div>
+            </styles.PaymentContainer>
+          </div>
+          <div>
+            <h1>Resumo do Pedido</h1>
+            <hr />
+            <table>
+              <tr>
+                <td>Produto</td>
+                <td>R$ {product.price}</td>
+              </tr>
+              <tr>
+                <td>Tax. Entrega</td>
+                <td>R$ {fee.toFixed(2)}</td>
+              </tr>
+            </table>
+            <hr />
+            <table>
+              <tr>
+                <td>Você pagará</td>
+                <td>R$ {(parseFloat(product.price) + fee).toFixed(2)}</td>
+              </tr>
+            </table>
+            <button>Finalizar Pedido</button>
+          </div>
         </div>
       </div>
     </>
