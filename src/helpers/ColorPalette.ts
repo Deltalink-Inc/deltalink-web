@@ -6,8 +6,9 @@ export function palette() {
     platinum2: "#D9D9D9",
 
     timberwolf: "#D3D3D3",
-    raisinBlack: "#1C1C26",
     davysGray: "#585862",
+    raisinBlack: "#1C1C26",
+    night: "#131419",    
 
     keppel: "#25BFA5",
   };

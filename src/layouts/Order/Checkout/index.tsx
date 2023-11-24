@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import { AddressForm } from "../../../components/Form/Address";
+import { AddressForm } from "../../../components/Form/Address/Address";
 import { CustomerNav } from "../../../components/Header";
 import { PixDetails } from "../../../components/PaymentMethods/PixDetails";
 
 import * as styles from "./style";
-import { palette } from "../../../helpers/ColorPalette";
+import { palette } from "../../../helpers/colorPalette";
 
 import { ProductsDb } from "../../../db/Products";
 import { WeightFee } from "../../../helpers/feeRates";
@@ -50,16 +50,16 @@ export function Checkout() {
             backgroundColor: palette().platinum2,
           }}
         >
-          <div>
-            <div>
-              <h1>Endereço</h1>
+          <styles.MainContainer>
+            <styles.AddressBox>
+              <styles.AddressTitle>Endereço</styles.AddressTitle>
               <AddressForm />
-            </div>
+            </styles.AddressBox>
             <styles.PaymentContainer>
               <styles.PaymentMethodSelect>
-                <styles.PaymentContainerTitle>
+                {/* <styles.PaymentContainerTitle>
                   Escolha como Pagar
-                </styles.PaymentContainerTitle>
+                </styles.PaymentContainerTitle> */}
                 <div>
                   <styles.SelectMethodContainer>
                     <styles.MethodButton htmlFor="pix">
@@ -88,7 +88,7 @@ export function Checkout() {
                 <PixDetails/>
               </div>
             </styles.PaymentContainer>
-          </div>
+          </styles.MainContainer>
           <div>
             <h1>Resumo do Pedido</h1>
             <hr />

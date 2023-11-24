@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { palette } from "../../../helpers/ColorPalette";
+import { palette } from "../../../helpers/colorPalette/";
 
 export const PixContainer = styled.div`
+    padding: 1rem;
     height: 100%;
 
     display: flex;
@@ -15,11 +16,12 @@ export const PixContainer = styled.div`
 `
 
 export const PixBox = styled.div`
-    padding: 0 10rem;
+    padding: 0 8rem;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 10rem;
+
 `
 
 export const QrCodeContainer = styled.div`
@@ -29,7 +31,7 @@ export const QrCodeContainer = styled.div`
 `
 
 export const PixQrCode = styled.img`
-    width: 8rem;
+    width: 8.8rem;
 
     border: solid .4rem ${palette().davysGray};
     border-radius: 6px;
@@ -50,5 +52,50 @@ export const PixTitle = styled.p`
     font-weight: 400;
     text-align: center;
 
-    opacity: 60%;
+    opacity: 50%;
+    color: ${palette().night};
+`
+
+export const CopyCodeLabel = styled.label`
+    font-size: .9rem;
+    font-weight: 500;
+
+    opacity: 50%;
+    color: ${palette().night};
+`
+
+export const CodeInput = styled.input`
+    width: 14rem;
+    height: 2.3rem;    
+    margin-top: .5rem;
+    margin-bottom: .8rem;
+    padding: .5rem;
+    
+    border: none;
+    border-radius: 6px;
+
+    font-weight: 500;
+
+    color: ${palette().davysGray};
+    background-color: ${palette().timberwolf};
+`
+
+export const CopyButton = styled.button`
+    padding: .5rem 1rem;    
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+    font-weight: 500;
+
+    color: ${palette().whiteSmoke};
+    background-color: ${palette().keppel};
+
+    &:hover {
+        opacity: 75%;
+    }
 `

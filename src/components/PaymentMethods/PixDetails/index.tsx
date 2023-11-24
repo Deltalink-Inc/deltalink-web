@@ -6,6 +6,9 @@ import {
   PixQrCode,
   PixTitle,
   CodeContainer,
+  CopyCodeLabel,
+  CodeInput,
+  CopyButton
 } from "./styles";
 
 export function PixDetails() {
@@ -21,9 +24,9 @@ export function PixDetails() {
             </PixTitle>
           </QrCodeContainer>
           <CodeContainer>
-            <label htmlFor="copyCode">Código Copia e Cola</label>
-            <input type="text" id="copyCode" value="" disabled/>
-            <button>Copiar Código</button>
+            <CopyCodeLabel htmlFor="copyCode">Código Copia e Cola</CopyCodeLabel>
+            <CodeInput type="text" id="copyCode" value="GhgSPOIf23r34KffweFEF423gkgkwoSJOspovlSDLKGlk" disabled/>
+            <CopyButton>Copiar Código</CopyButton>
           </CodeContainer>
         </PixBox>
       </PixContainer>
