@@ -45,14 +45,14 @@ export function Checkout() {
         >
           <styles.MainContainer>
             <styles.AddressBox>
-              <styles.AddressTitle>Endereço</styles.AddressTitle>
+              <styles.Title>Endereço</styles.Title>
               <AddressForm />
             </styles.AddressBox>
             <styles.PaymentContainer>
               <styles.PaymentMethodSelect>
-                {/* <styles.PaymentContainerTitle>
+                <styles.Title>
                   Escolha como Pagar
-                </styles.PaymentContainerTitle> */}
+                </styles.Title>
                 <div>
                   <styles.SelectMethodContainer>
                     <styles.MethodButton htmlFor="pix">
