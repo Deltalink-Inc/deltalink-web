@@ -2,13 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\assets",
+    "\\src\\API",
+    "\\src\\API\\controllers",
+    "\\src\\assets\\css",
     "\\src\\assets\\img",
-    "\\src\\assets\\img\\products-image",
-    "\\src\\db",
-    "\\src\\layouts\\Homepage",
-    "\\src\\types"
+    "\\src\\infrastructure"
   ],
-  "SelectedNode": "\\src\\assets\\img\\products-image\\4786.jpg",
+  "SelectedNode": "\\src\\infrastructure\\Server.js",
   "PreviewInSolutionExplorer": false
 }

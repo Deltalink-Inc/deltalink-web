@@ -5,8 +5,7 @@ import { AddressForm } from "../../../components/Form/Address/Address";
 import { CustomerNav } from "../../../components/Header";
 import { PixDetails } from "../../../components/PaymentMethods/PixDetails";
 
-import * as styles from "./style";
-import { palette } from "../../../helpers/colorPalette";
+import * as styles from "./styles";
 
 import { ProductsDb } from "../../../db/Products";
 import { WeightFee } from "../../../helpers/feeRates";
@@ -40,16 +39,7 @@ export function Checkout() {
         }}
       >
         <CustomerNav />
-        <div
-          style={{
-            flex: "1",
-
-            display: "grid",
-            gridTemplateColumns: "4fr 1fr",
-
-            backgroundColor: palette().platinum2,
-          }}
-        >
+        <styles.Container>
           <styles.MainContainer>
             <styles.AddressBox>
               <styles.AddressTitle>Endereço</styles.AddressTitle>
@@ -111,7 +101,7 @@ export function Checkout() {
             </table>
             <button>Finalizar Pedido</button>
           </div>
-        </div>
+        </styles.Container>
       </div>
     </>
   );
