@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { palette } from "../../helpers/ColorPalette";
-
-const Palette = palette();
+import { palette } from "../../helpers/Colorpalette";
 
 export const ProductCardBody = styled.div`
   width: 15rem;
@@ -15,7 +13,7 @@ export const ProductCardBody = styled.div`
 
   border-radius: 10px;
 
-  background-color: #fff;
+  background-color: ${palette().absoluteWhite};
 `;
 
 export const LikeButton = styled.button`
@@ -74,11 +72,11 @@ export const BuyButton = styled.button`
 
   transition: 0.4s;
 
-  color: ${Palette.davysGray};
-  background-color: ${Palette.timberwolf};
+  color: ${palette().davysGray};
+  background-color: ${palette().timberwolf};
 
   &:hover {
-    color: ${Palette.whiteSmoke};
-    background-color: ${Palette.keppel};
+    color: ${palette().whiteSmoke};
+    background-color: ${palette().keppel};
   }
 `;

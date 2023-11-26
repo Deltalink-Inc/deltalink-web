@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { palette } from "../../helpers/ColorPalette";
 
-const Palette = palette();
-
 export const CardBody = styled.div`
   width: 9rem;
   height: 12rem;
@@ -19,12 +17,12 @@ export const CardBody = styled.div`
 
   border-radius: 6px;
 
-  background-color: ${Palette.platinum2};
+  background-color: ${palette().platinum2};
 
   #storeName,
   #storeDescription,
   #storeCategory {
-    color: ${Palette.davysGray};
+    color: ${palette().davysGray};
   }
   #storeLogo {
     width: 100%;

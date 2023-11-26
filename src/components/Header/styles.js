@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { palette } from "../../helpers/ColorPalette";
-
-const Palette = palette();
+import { palette } from "../../helpers/Colorpalette";
 
 export const Header = styled.header`
   max-width: 100vw;
@@ -12,7 +10,7 @@ export const Header = styled.header`
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 2fr 1fr;
 
-  background-color: ${Palette.keppel};
+  background-color: ${palette().keppel};
 `;
 
 export const Column1 = styled.div`
@@ -30,7 +28,7 @@ export const Logo = styled.img`
 export const DeltaLinkTitle = styled.h1`
   font-size: 1.2rem;
   cursor: pointer;
-  color: ${Palette.whiteSmoke};
+  color: ${palette().whiteSmoke};
   opacity: 100%;
 `;
 
@@ -52,7 +50,7 @@ export const SearchInputBox = styled.div`
 
   border-radius: 6px;
 
-  background-color: ${Palette.whiteSmoke};
+  background-color: ${palette().whiteSmoke};
 `;
 
 export const SearchInput = styled.input`
@@ -62,20 +60,20 @@ export const SearchInput = styled.input`
   font-weight: 600;
 
   border: none;
-  border-right: 1px solid ${Palette.timberwolf};
+  border-right: 1px solid ${palette().timberwolf};
   outline: none;
-  color: ${Palette.davysGray};
+  color: ${palette().davysGray};
   background-color: transparent;
 
   &::selection {
-    color: ${Palette.davysGray};
-    background-color: ${Palette.timberwolf};
+    color: ${palette().davysGray};
+    background-color: ${palette().timberwolf};
     opacity: 50%;
   }
 
   &::placeholder {
     font-weight: 600;
-    color: ${Palette.platina};
+    color: ${palette().platina};
   }
 `;
 
@@ -87,13 +85,13 @@ export const SearchButton = styled.button`
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   outline: none;
-  color: ${Palette.davysGray};
+  color: ${palette().davysGray};
   background-color: transparent;
 
   cursor: pointer;
 
   &:hover {
-    background-color: ${Palette.timberwolf};
+    background-color: ${palette().timberwolf};
   }
 `;
 
@@ -106,7 +104,7 @@ export const CategoryList = styled.ul`
 `;
 export const CategoryItem = styled.li`
   button {
-    color: ${Palette.whiteSmoke};
+    color: ${palette().whiteSmoke};
 
     font-family: Poppins;
     font-size: 1rem;
@@ -136,7 +134,7 @@ export const ProfileList = styled.ul`
 `;
 export const ProfileItem = styled.li`
   button {
-    color: ${Palette.whiteSmoke};
+    color: ${palette().whiteSmoke};
 
     font-family: Poppins;
     font-size: 1rem;
