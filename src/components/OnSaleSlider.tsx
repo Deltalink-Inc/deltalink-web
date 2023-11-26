@@ -29,7 +29,7 @@ export function OnSaleSlider() {
               src={product.imgPath}
               style={{
                 width: "100vw",
-                height: "33vh",
+                height: "60vh",
                 objectFit: "cover",
               }}
               alt={`Product ${product.id}`}

@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { palette } from "../../helpers/ColorPalette";
 
 export const MainContainer = styled.div`
-  margin-top: 1rem; 
+  margin-top: 1rem;
   padding-top: 2rem;
+  padding-bottom: 3rem;
 
   display: flex;
   flex-direction: row;

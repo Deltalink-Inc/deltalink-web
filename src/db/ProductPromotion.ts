@@ -4,17 +4,12 @@ export function ProductPromotion(): ProductPromotionSlideShowProps[] {
   return [
     {
       id: "1",
-      imgPath: "src/assets/img/promotion/produtos-apple.jpg",
+      imgPath: "src/assets/img/promotion/natal-banner.svg",
       promotionUrl: "",
     },
     {
       id: "2",
-      imgPath: "src/assets/img/promotion/livros.jpg",
-      promotionUrl: "",
-    },
-    {
-      id: "3",
-      imgPath: "src/assets/img/promotion/meu-clima-perfeito.jpg",
+      imgPath: "src/assets/img/promotion/headset-banner.svg",
       promotionUrl: "",
     },
   ];
