@@ -51,6 +51,7 @@ export const CopyCodeLabel = styled.label`
   font-size: 0.8rem;
   font-weight: 500;
 
+  opacity: 60%;
   color: ${palette().davysGray};
   background-color: ${palette().whiteSmoke};
 `;
@@ -67,6 +68,7 @@ export const CodeInput = styled.input`
 
   font-weight: 600;
 
+  opacity: 60%;
   color: ${palette().davysGray};
   background-color: transparent;
 `;
@@ -81,6 +83,15 @@ export const CopyButton = styled.button`
   border: none;
   border-radius: 6px;
 
+  cursor: pointer;
+
+  transition: .4s;
+
   color: ${palette().whiteSmoke};
   background-color: ${palette().keppel};
+
+  &:hover{
+    opacity: 60%;
+  }
+
 `;

@@ -24,7 +24,7 @@ export function PixDetails() {
             </PixTitle>
           </QrCodeContainer>
           <CodeContainer>
-            <CopyCodeLabel htmlFor="copyCode">Código Copia e Cola</CopyCodeLabel>
+            <CopyCodeLabel htmlFor="copyCode">Pix Copia e Cola</CopyCodeLabel>
             <CodeInput type="text" id="copyCode" value="GhgSPOIf23r34KffweFEF423gkgkwoSJOspovlSDLKGlk" disabled/>
             <CopyButton>Copiar Código</CopyButton>
           </CodeContainer>

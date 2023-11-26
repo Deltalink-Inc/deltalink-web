@@ -50,7 +50,7 @@ export function Checkout() {
                 <styles.Title>Pagamento</styles.Title>
                 <styles.SelectMethodContainer>
                   <styles.MethodButton htmlFor="pix">
-                    <input type="radio" id="pix" name="paymentMethod"/>
+                    <input type="radio" id="pix" name="paymentMethod" />
                     <styles.MethodTitle>PIX</styles.MethodTitle>
                     <styles.MethodIcon className="fa-brands fa-pix"></styles.MethodIcon>
                   </styles.MethodButton>
@@ -71,28 +71,34 @@ export function Checkout() {
               </div>
             </styles.PaymentContainer>
           </styles.MainContainer>
-          <div>
-            <h1>Resumo do Pedido</h1>
-            <hr />
+          <styles.ResumeOrderContainer>
+            <styles.ResumeOrderTitle>Resumo do Pedido</styles.ResumeOrderTitle>
+            <styles.HorizontalRule />
             <table>
-              <tr>
-                <td>Produto</td>
-                <td>R$ {product.price}</td>
-              </tr>
-              <tr>
-                <td>Tax. Entrega</td>
-                <td>R$ {fee.toFixed(2)}</td>
-              </tr>
+              <styles.TableRow>
+                <styles.TableData>{product.name}</styles.TableData>
+                <styles.TableData>x1</styles.TableData>
+              </styles.TableRow>
+              <styles.TableRow>
+                <styles.TableData>Produto</styles.TableData>
+                <styles.TableData>R$ {product.price}</styles.TableData>
+              </styles.TableRow>
+              <styles.TableRow>
+                <styles.TableData>Tax. Entrega</styles.TableData>
+                <styles.TableData>R$ {fee.toFixed(2)}</styles.TableData>
+              </styles.TableRow>
             </table>
-            <hr />
+            <styles.HorizontalRule />
             <table>
-              <tr>
-                <td>Você pagará</td>
-                <td>R$ {(parseFloat(product.price) + fee).toFixed(2)}</td>
-              </tr>
+              <styles.TableRow>
+                <styles.TableData>Você pagará</styles.TableData>
+                <styles.TableData>
+                  R$ {(parseFloat(product.price) + fee).toFixed(2)}
+                </styles.TableData>
+              </styles.TableRow>
             </table>
-            <button>Finalizar Pedido</button>
-          </div>
+            <styles.ConfirmButton>Finalizar Pedido</styles.ConfirmButton>
+          </styles.ResumeOrderContainer>
         </styles.Container>
       </div>
     </>

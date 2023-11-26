@@ -51,7 +51,7 @@ export const SelectMethodContainer = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: .8rem;
+  gap: 0.8rem;
 
   border-right: 1px solid ${palette().timberwolf};
 `;
@@ -64,7 +64,7 @@ export const MethodButton = styled.label`
 
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 
   border: 1px solid ${palette().timberwolf};
   border-radius: 6px;
@@ -76,4 +76,76 @@ export const MethodTitle = styled.span`
 
 export const MethodIcon = styled.i`
   color: ${palette().davysGray};
+`;
+
+// Resume Order
+
+export const ResumeOrderContainer = styled.div`
+  height: fit-content;
+  margin: 1rem;
+  padding: 0 1rem 1rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid ${palette().timberwolf};
+  border-radius: 6px;
+`;
+
+export const ResumeOrderTitle = styled.h2`
+  margin: 0.5rem 0;
+
+  font-size: 1rem;
+
+  opacity: 50%;
+  color: ${palette().night};
+`;
+
+export const ProductName = styled.p`
+  margin: 0.2rem 0;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  opacity: 60%;
+  color: ${palette().night};
+`;
+
+export const TableRow = styled.tr`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const TableData = styled.td`
+  margin: 0.2rem 0;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  opacity: 60%;
+  color: ${palette().night};
+`;
+
+export const ConfirmButton = styled.button`
+  margin-top: 0.6rem;
+  padding: 0.5rem;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: .4s;
+
+  color: ${palette().whiteSmoke};
+  background-color: ${palette().keppel};
+
+  &:hover {
+    opacity:60%;
+  }
+`;
+
+export const HorizontalRule = styled.hr`
+  opacity: 50%;
 `;
