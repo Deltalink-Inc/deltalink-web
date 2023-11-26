@@ -6,9 +6,8 @@ export const Header = styled.header`
   max-height: 8em;
   padding: 1rem 0 0.5rem 0;
 
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
+  justify-content: center;
 
   background-color: ${palette().keppel};
 `;
@@ -33,6 +32,9 @@ export const DeltaLinkTitle = styled.h1`
 `;
 
 export const Column2 = styled.div`
+  margin-left: 8rem;
+  margin-right: 4rem;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
