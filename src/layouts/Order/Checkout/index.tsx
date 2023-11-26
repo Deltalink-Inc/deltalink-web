@@ -39,10 +39,7 @@ export function Checkout() {
         }}
       >
         <CustomerNav />
-        <styles.Container
-          style={{
-          }}
-        >
+        <styles.Container style={{}}>
           <styles.MainContainer>
             <styles.AddressBox>
               <styles.Title>Endereço</styles.Title>
@@ -50,35 +47,27 @@ export function Checkout() {
             </styles.AddressBox>
             <styles.PaymentContainer>
               <styles.PaymentMethodSelect>
-                <styles.Title>
-                  Escolha como Pagar
-                </styles.Title>
-                <div>
-                  <styles.SelectMethodContainer>
-                    <styles.MethodButton htmlFor="pix">
-                      <input type="radio" id="pix" name="paymentMethod"/>
-                      <span>PIX</span>
-                      <i className="fa-brands fa-pix"></i>
-                    </styles.MethodButton>
-                    <styles.MethodButton htmlFor="creditCard">
-                      <input
-                        type="radio"
-                        id="creditCard"
-                        name="paymentMethod"
-                      />
-                      <span>Cartão de Crédito</span>
-                      <i className="fa-solid fa-credit-card"></i>
-                    </styles.MethodButton>
-                    <styles.MethodButton htmlFor="money">
-                      <input type="radio" id="money" name="paymentMethod"/>
-                      <span>Dinheiro</span>
-                      <i className="fa-solid fa-money-bill"></i>
-                    </styles.MethodButton>
-                  </styles.SelectMethodContainer>
-                </div>
+                <styles.Title>Pagamento</styles.Title>
+                <styles.SelectMethodContainer>
+                  <styles.MethodButton htmlFor="pix">
+                    <input type="radio" id="pix" name="paymentMethod" />
+                    <span>PIX</span>
+                    <i className="fa-brands fa-pix"></i>
+                  </styles.MethodButton>
+                  <styles.MethodButton htmlFor="creditCard">
+                    <input type="radio" id="creditCard" name="paymentMethod" />
+                    <span>Cartão de Crédito</span>
+                    <i className="fa-solid fa-credit-card"></i>
+                  </styles.MethodButton>
+                  <styles.MethodButton htmlFor="money">
+                    <input type="radio" id="money" name="paymentMethod" />
+                    <span>Dinheiro</span>
+                    <i className="fa-solid fa-money-bill"></i>
+                  </styles.MethodButton>
+                </styles.SelectMethodContainer>
               </styles.PaymentMethodSelect>
               <div>
-                <PixDetails/>
+                <PixDetails />
               </div>
             </styles.PaymentContainer>
           </styles.MainContainer>

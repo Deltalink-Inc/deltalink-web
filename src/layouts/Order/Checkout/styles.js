@@ -11,7 +11,13 @@ export const Container = styled.div`
 `;
 
 export const MainContainer = styled.div`
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
   padding: 1rem;
+
 `;
 
 export const AddressBox = styled.div`
@@ -20,25 +26,38 @@ export const AddressBox = styled.div`
 
 export const Title = styled.h1`
   position: relative;
-  top: .5rem;
-  left: .5rem;
+  top: 0.5rem;
+  left: 0.5rem;
 
-  font-size: 1rem;
+  font-size: 0.9rem;
 
   opacity: 50%;
   color: ${palette().night};
 `;
 
-export const PaymentContainer = styled.div``;
+export const PaymentContainer = styled.div`
+  flex: 1;
 
-export const PaymentMethodSelect = styled.div``;
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+`;
+
+export const PaymentMethodSelect = styled.div`
+
+`;
 
 // Select Method Payment
 
-export const SelectMethodContainer = styled.div``;
+export const SelectMethodContainer = styled.div`
+  margin-top: 1rem;
 
-export const MethodButton = styled.label`
+  display: flex;
+  flex-direction: column;
+
+  background-color: blue;
 `;
+
+export const MethodButton = styled.label``;
 
 export const MethodTitle = styled.span``;
 

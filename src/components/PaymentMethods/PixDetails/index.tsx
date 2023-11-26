@@ -1,7 +1,6 @@
 import React from "react";
 import {
   PixContainer,
-  PixBox,
   QrCodeContainer,
   PixQrCode,
   PixTitle,
@@ -15,7 +14,6 @@ export function PixDetails() {
   return (
     <>
       <PixContainer>
-        <PixBox>
           <QrCodeContainer>
             <PixQrCode src="/pixqrcode.svg" alt="" />
             <PixTitle>
@@ -28,7 +26,6 @@ export function PixDetails() {
             <CodeInput type="text" id="copyCode" value="GhgSPOIf23r34KffweFEF423gkgkwoSJOspovlSDLKGlk" disabled/>
             <CopyButton>Copiar Código</CopyButton>
           </CodeContainer>
-        </PixBox>
       </PixContainer>
     </>
   );
