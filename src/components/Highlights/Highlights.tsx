@@ -1,37 +1,34 @@
 import React from "react";
 
-import { MainContainer } from "./style";
+import { MainContainer, Box, Icon, Title, Details } from "./styles";
 
 export function Highlights() {
   return (
     <MainContainer>
-      <div>
-        <i className="fa-solid fa-gauge"></i>
-        <h1>Velocidade</h1>
-        <p>
+      <Box>
+        <Icon className="fa-solid fa-gauge"></Icon>
+        <Title>Velocidade</Title>
+        <Details>
           Nossa plataforma se orgulha de oferecer uma entrega ágil e eficiente,
           garantindo que seus produtos cheguem rapidamente às suas mãos.
-        </p>
-      </div>
-      <div>
-        <i className="fa-solid fa-lock"></i>
-        <h1>Segurança</h1>
-        <p>
-          Garantimos a máxima segurança das informações dos nossos clientes,
-          utilizando as mais avançadas tecnologias de criptografia e protocolos
-          de segurança.
-        </p>
-      </div>
-      <div>
-        <i className="fa-solid fa-ship"></i>
-        <h1>Navegação Descomplicada</h1>
-        <p>
-          Nossa plataforma foi projetada visando a máxima facilidade de
-          navegação. Com um layout intuitivo e menus simples, você encontrará o
-          que precisa de forma rápida e descomplicada, proporcionando uma
-          experiência fluida e eficiente.
-        </p>
-      </div>
+        </Details>
+      </Box>
+      <Box>
+        <Icon className="fa-solid fa-lock"></Icon>
+        <Title>Segurança</Title>
+        <Details>
+          Comprometemo-nos a garantir a máxima segurança das informações de
+          nossos clientes, utilizando tecnologias de criptografia avançadas.
+        </Details>
+      </Box>
+      <Box>
+        <Icon className="fa-solid fa-ship"></Icon>
+        <Title>Navegação Descomplicada</Title>
+        <Details>
+          Layout intuitivo e menus simplificados que permitem encontrar o
+          necessário de forma rápida, proporcionando experiência eficiente.
+        </Details>
+      </Box>
     </MainContainer>
   );
 }
