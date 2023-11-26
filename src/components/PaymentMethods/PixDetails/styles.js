@@ -5,10 +5,15 @@ export const PixContainer = styled.div`
   height: 100%;
 
   display: grid;
+`;
+
+export const PixBox = styled.div`
+  height: 15rem;
+
+  display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  justitf
-`;
+`
 
 export const QrCodeContainer = styled.div`
   display: grid;

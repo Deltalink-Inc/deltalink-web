@@ -50,19 +50,19 @@ export function Checkout() {
                 <styles.Title>Pagamento</styles.Title>
                 <styles.SelectMethodContainer>
                   <styles.MethodButton htmlFor="pix">
-                    <input type="radio" id="pix" name="paymentMethod" />
-                    <span>PIX</span>
-                    <i className="fa-brands fa-pix"></i>
+                    <input type="radio" id="pix" name="paymentMethod"/>
+                    <styles.MethodTitle>PIX</styles.MethodTitle>
+                    <styles.MethodIcon className="fa-brands fa-pix"></styles.MethodIcon>
                   </styles.MethodButton>
                   <styles.MethodButton htmlFor="creditCard">
                     <input type="radio" id="creditCard" name="paymentMethod" />
-                    <span>Cartão de Crédito</span>
-                    <i className="fa-solid fa-credit-card"></i>
+                    <styles.MethodTitle>Cartão de Crédito</styles.MethodTitle>
+                    <styles.MethodIcon className="fa-solid fa-credit-card"></styles.MethodIcon>
                   </styles.MethodButton>
                   <styles.MethodButton htmlFor="money">
                     <input type="radio" id="money" name="paymentMethod" />
-                    <span>Dinheiro</span>
-                    <i className="fa-solid fa-money-bill"></i>
+                    <styles.MethodTitle>Dinheiro</styles.MethodTitle>
+                    <styles.MethodIcon className="fa-solid fa-money-bill"></styles.MethodIcon>
                   </styles.MethodButton>
                 </styles.SelectMethodContainer>
               </styles.PaymentMethodSelect>
