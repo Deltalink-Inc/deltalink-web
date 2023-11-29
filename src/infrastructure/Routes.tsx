@@ -1,13 +1,11 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-import { AccountType } from "../layouts/register/AccountType";
-import { SignUpRedirect } from "../layouts/register/SignUp/SignUpRedirect";
-import { Login } from "../layouts/Login";
-
 import { Homepage } from "../layouts/Homepage";
+import { Address } from "../layouts/Order/Address";
+import { Payment } from "../layouts/Order/Payment";
+import { Completed } from "../layouts/Order/Completed";
 import { ProductCatalog } from "../layouts/Product/Catalog";
-import { Checkout } from "../layouts/Order/Checkout";
 
 export const Routes = createBrowserRouter([
   {
@@ -19,8 +17,16 @@ export const Routes = createBrowserRouter([
     element: <ProductCatalog />,
   },
   {
-    path: "/order/checkout/:productId",
-    element: <Checkout />,
+    path: "/order/address/:productId",
+    element: <Address />,
+  },
+  {
+    path: "/order/payment/:productId",
+    element: <Payment />,
+  },
+  {
+    path: "/order/completed/",
+    element: <Completed />,
   },
   // {
   //   path: "/login",

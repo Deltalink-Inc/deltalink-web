@@ -10,7 +10,7 @@ import {
   BuyButton,
 } from "./styles";
 
-import { sessionSaveData } from "../../util/sessionSave";
+import { sessionSaveData } from "../../utils/sessionSave";
 
 export function ProductCatalogCard(props) {
   return (
@@ -27,7 +27,7 @@ export function ProductCatalogCard(props) {
         <span>{` R$${(props.price / props.installments).toFixed(2)}`}</span>
       </InstallmentsStyle>
       <div>
-        <Link to={`/order/checkout/${props.id}`}>
+        <Link to={`/order/address/${props.id}`}>
           <BuyButton>Comprar</BuyButton>
         </Link>
       </div>

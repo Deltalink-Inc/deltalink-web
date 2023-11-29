@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { palette } from "../../helpers/Colorpalette";
+import { palette } from "../../helpers/ColorPalette";
 
 export const ProductCardBody = styled.div`
   width: 15rem;
@@ -12,7 +12,7 @@ export const ProductCardBody = styled.div`
   align-items: center;
 
   border-radius: 10px;
-
+  
   background-color: ${palette().absoluteWhite};
 `;
 
