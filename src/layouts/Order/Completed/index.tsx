@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
 
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as styles from "./styles";
 
 export function Completed() {
@@ -28,20 +28,21 @@ export function Completed() {
         <styles.Container>
           <Player
             autoplay
-            loop
+            loop={false}
             src="/lottie/check.json"
             style={{ height: "300px", width: "300px" }}
+            keepLastFrame
           ></Player>
           <styles.Title>
             <h1>Obrigado!</h1>
           </styles.Title>
           <styles.Description>
             <p>
-              Seu pedido foi enviado com sucesso!
+              Pedido recebido com sucesso!
               <br />
               <br />
-              Enviamos um QR code para o seu email.
-              Mostre-o ao motoboy no ato da entrega. Agradecemos pela confiança!
+              Enviamos um QR code para o seu email. Mostre-o ao motoboy no ato
+              da entrega. Agradecemos pela confiança!
             </p>
           </styles.Description>
           <Link to="/">

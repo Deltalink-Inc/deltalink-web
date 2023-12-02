@@ -5,7 +5,7 @@ import * as styles from "./styles";
 
 import { ProductsDb } from "../../../db/Products";
 import { calculateDeliveryFee } from "../../../utils/calculateDeliveryFee";
-import { orderCompleted } from "../../../utils/orderCompleted";
+import { Order } from "../../../services/order.service";
 
 import { CreditCardDetails } from "./../../../components/PaymentMethods/CreditCardDetails";
 
@@ -72,7 +72,7 @@ export function Payment(props) {
             <table>
               <styles.TableRow>
                 <styles.TableData>Você pagará</styles.TableData>
-                <styles.TableData>R$ {fee["total"]}</styles.TableData>
+                <styles.TableData>R$ {fee["total"].toFixed(2)}</styles.TableData>
               </styles.TableRow>
             </table>
             <Link
@@ -81,7 +81,9 @@ export function Payment(props) {
                 marginTop: "auto",
               }}
             >
-              <styles.ConfirmButton onClick={()=>{orderCompleted()}}>Finalizar Pedido</styles.ConfirmButton>
+              <styles.ConfirmButton onClick={()=>{
+                new Order().sendOrder(product, fee)
+              }}>Finalizar Pedido</styles.ConfirmButton>
             </Link>
           </styles.ResumeOrderContainer>
         </styles.Container>

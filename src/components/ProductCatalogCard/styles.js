@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { palette } from "../../helpers/ColorPalette";
+import { palette } from "../../helpers/Colorpalette";
 
 export const ProductCardBody = styled.div`
   width: 15rem;

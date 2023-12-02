@@ -6,7 +6,8 @@ import { ProductProps } from "../../../types/ProductProps";
 import { ProductsDb } from "../../../db/Products";
 import { useParams } from "react-router-dom";
 
-import { MainContainer } from "./styles";
+import { MainContainer, Title, CardContainer } from "./styles";
+import { Category } from "@mui/icons-material";
 
 export function ProductCatalog() {
   const { categoryId } = useParams();
@@ -46,19 +47,21 @@ export function ProductCatalog() {
 
   return (
     <>
-      <div>
+      <div style={{}}>
         <CustomerNav />
-        <h1>Eletrônicos</h1>
         <MainContainer>
-          {productsList.map((product) => (
-            <ProductCatalogCard
-              id={product.id}
-              imgPath={product.imgPath}
-              name={product.name}
-              price={product.price}
-              installments={product.installments}
-            />
-          ))}
+          <Title>{"Eletrônicos"}</Title>
+          <CardContainer>
+            {productsList.map((product) => (
+                <ProductCatalogCard
+                  id={product.id}
+                  imgPath={product.imgPath}
+                  name={product.name}
+                  price={product.price}
+                  installments={product.installments}
+                />
+            ))}
+          </CardContainer>
         </MainContainer>
       </div>
     </>
