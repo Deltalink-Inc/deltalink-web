@@ -1,55 +1,69 @@
-import { ContentPasteOffSharp } from "@mui/icons-material";
 import React from "react";
+
+import * as styles from "./styles";
 
 export function CreditCardDetails({ productObject, fee }) {
   const installmentsList: number[] = [];
 
   function calculateInstallments() {
-    const productPrice = parseFloat(productObject.price) + fee;
-
     for (
       let count = 1;
       count <= parseInt(productObject.installments);
       count++
     ) {
-      const installmentValue = (productPrice / count).toFixed(2);
+      const installmentValue = (fee.total / count).toFixed(2);
       installmentsList.push(parseFloat(installmentValue));
     }
   }
   calculateInstallments();
-  console.log(fee);
   return (
     <>
-      <div>
-        <label htmlFor="cardNumber">Número do Cartão*</label>
-        <input type="text" id="cardNumber" />
-      </div>
-      <div>
-        <label htmlFor="expirationDate">Data de Validade*</label>
-        <input type="date" id="expirationDate" />
-      </div>
-      <div>
-        <label htmlFor="cvv">CVV*</label>
-        <input type="text" id="cvv" />
-      </div>
-      <div>
-        <label htmlFor="cpf">CPF do Titular*</label>
-        <input type="text" id="cpf" />
-      </div>
-      <div>
-        <label htmlFor="fullName">Nome Completo do Titular*</label>
-        <input type="text" id="fullName" />
-      </div>
-      <div>
-        <label htmlFor="installments">Parcelas</label>
-        <select name="installments" id="installments">
-          {installmentsList.map((value, index) => (
-            <option key={index} value={index + 1}>
-              {index + 1}x de R$ {value.toFixed(2)}
-            </option>
-          ))}
-        </select>
-      </div>
+      <styles.CreditCardContainer>
+        <styles.CreditCardBox>
+          <styles.FirstRow>
+            <styles.InputContainer>
+              <styles.Title htmlFor="cardNumber">
+                Número do Cartão*
+              </styles.Title>
+              <styles.Input type="text" id="cardNumber" value="5556 2066 3162 2800"/>
+            </styles.InputContainer>
+            <styles.InputContainer>
+              <styles.Title htmlFor="expirationDate">
+                Data de Validade*
+              </styles.Title>
+              <styles.Input type="date" id="expirationDate"/>
+            </styles.InputContainer>
+          </styles.FirstRow>
+          <styles.SecondRow>
+            <styles.InputContainer>
+              <styles.Title htmlFor="cvv">CVV*</styles.Title>
+              <styles.Input type="text" id="cvv" value="387"/>
+            </styles.InputContainer>
+            <styles.InputContainer>
+              <styles.Title htmlFor="cpf">CPF do Titular*</styles.Title>
+              <styles.Input type="text" id="cpf" value="977.684.786-22"/>
+            </styles.InputContainer>
+          </styles.SecondRow>
+          <styles.ThirdRow>
+            <styles.InputContainer>
+              <styles.Title htmlFor="fullName">
+                Nome Completo do Titular*
+              </styles.Title>
+              <styles.Input type="text" id="fullName" value="Pedro Soares"/>
+            </styles.InputContainer>
+            <styles.InputContainer>
+              <styles.Title htmlFor="installments">Parcelas</styles.Title>
+              <styles.Select name="installments" id="installments">
+                {installmentsList.map((value, index) => (
+                  <option key={index} value={index + 1}>
+                    {index + 1}x de R$ {value.toFixed(2)}
+                  </option>
+                ))}
+              </styles.Select>
+            </styles.InputContainer>
+          </styles.ThirdRow>
+        </styles.CreditCardBox>
+      </styles.CreditCardContainer>
     </>
   );
 }

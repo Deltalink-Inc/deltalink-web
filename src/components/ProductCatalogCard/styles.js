@@ -12,7 +12,7 @@ export const ProductCardBody = styled.div`
   align-items: center;
 
   border-radius: 10px;
-
+  
   background-color: ${palette().absoluteWhite};
 `;
 

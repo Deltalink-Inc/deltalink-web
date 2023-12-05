@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { palette } from "../../../helpers/Colorpalette";
 
 export const AddressContainer = styled.div`
+  width: 90%;
   padding: 1rem;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 
   display: flex;
   flex-direction: column;

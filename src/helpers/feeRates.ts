@@ -7,6 +7,7 @@ export const WeightFee = {
     { min: 12, max: Infinity, rate: null },
   ],
 };
+
 export const DistanceFee = {
   perKm: 0.5,
 };

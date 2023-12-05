@@ -10,80 +10,93 @@ export const Container = styled.div`
   background-color: ${palette().whiteSmoke};
 `;
 
-export const MainContainer = styled.div`
-  height: 100%;
+export const Header = styled.header`
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: ${palette().keppel};
+`;
+
+export const BackButton = styled.button`
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  border: none;
+
+  outline: none;
+
+  font-weight: 500;
+
+  transition: .2s;
+
+  color: ${palette().whiteSmoke};
+  background-color: transparent;
+
+  &:hover {
+    opacity: 50%; 
+  }
+
+`;
+
+export const Logo = styled.img`
+  height: 1.5rem;
+`;
+
+// Address Form
+
+export const AddressBox = styled.div`
+  padding: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 
   display: flex;
   flex-direction: column;
 
-  padding: 1rem;
+  border-left: 1px dashed ${palette().timberwolf};
+  border-right: 1px dashed ${palette().timberwolf};
 `;
 
-export const AddressBox = styled.div`
-  border-bottom: 1px dashed ${palette().timberwolf};
+export const AddressHeader = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
-export const Title = styled.h1`
+export const Icon = styled.i`
   position: relative;
   top: 0.5rem;
   left: 0.5rem;
 
-  font-size: 0.9rem;
+  font-size: 1rem;
 
   opacity: 50%;
   color: ${palette().night};
 `;
 
-export const PaymentContainer = styled.div`
-  flex: 1;
+export const Title = styled.h1`
+  position: relative;
+  top: 0.7rem;
+  left: 1.2rem;
 
-  display: grid;
-  grid-template-columns: 3fr 7fr;
-`;
+  font-size: 1rem;
 
-export const PaymentMethodSelect = styled.div``;
-
-// Select Method Payment
-
-export const SelectMethodContainer = styled.div`
-  margin-top: 1rem;
-  padding-left: 1rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-
-  border-right: 1px solid ${palette().timberwolf};
-`;
-
-export const MethodButton = styled.label`
-  width: 15rem;
-  height: 3rem;
-  padding: 0.5rem;
-  padding-left: 1rem;
-
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  border: 1px solid ${palette().timberwolf};
-  border-radius: 6px;
-`;
-
-export const MethodTitle = styled.span`
-  color: ${palette().davysGray};
-`;
-
-export const MethodIcon = styled.i`
-  color: ${palette().davysGray};
+  opacity: 50%;
+  color: ${palette().night};
 `;
 
 // Resume Order
 
 export const ResumeOrderContainer = styled.div`
-  height: fit-content;
+  height: 95%;
   margin: 1rem;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 0 1rem;
 
   display: flex;
   flex-direction: column;
@@ -128,7 +141,9 @@ export const TableData = styled.td`
 `;
 
 export const ConfirmButton = styled.button`
-  margin-top: 0.6rem;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 1rem;
   padding: 0.5rem;
 
   border: none;
@@ -136,13 +151,13 @@ export const ConfirmButton = styled.button`
 
   cursor: pointer;
 
-  transition: .4s;
+  transition: 0.4s;
 
   color: ${palette().whiteSmoke};
   background-color: ${palette().keppel};
 
   &:hover {
-    opacity:60%;
+    opacity: 60%;
   }
 `;
 
